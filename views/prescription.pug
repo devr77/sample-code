@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    style.
+      @media print {
+      body {
+      background-color: red;
+      }
+      }
+      .footer {
+      position: fixed;
+      left: 10px;
+      bottom: 20px;
+      right: 10px;
+      width: 95%;
+      color: black;
+      }
+  body(style="margin:10px;")
+    div(style="display: flex;justify-content: space-between;")
+      div(style="display: flex;")
+        div(style="display: flex;flex-direction: column;")
+          h1(style="display:contents;") #{drName}
+          div #{education}
+          div Registration No:-
+          div #{specialists}
+        div(style="margin-left:10px;")
+          img(src="https://picsum.photos/200/300", alt="logo", style="width:100px;height:100px;")
+      div(style="display: flex;flex-direction: column;")
+        h1(style="display:contents;") #{hospitalName}
+        div #{hospitalAddress}
+        div #{contactNo}
+    hr(style="height:2px;border-width:0;color:gray;background-color:gray")
+    div(style="display: flex;justify-content: space-between;")
+      .div Name-#{patientName}
+      .div Age-#{age}
+      .div Gender-#{gender}
+      .div Date-#{prescriptionDate}
+    div(style="display: flex;justify-content: space-between;")
+      .div Mobile No -#{cMobileNo}
+      .div Address -#{cMobileNo}
+    div
+      h1(style="display:contents;") Problem- #{problem}
+    h1(style="display:contents;") Rx-
+    div(style="margin-left: 10%;margin-top: 5px;")
+      | #{prescriptionNote}
+    .footer
+      div(style="display: flex;flex-direction:row-reverse;") Digitally Signed
+      div(style=" text-align: center;") Appointment Is Booked on 
+        a(href="https://medico.ink/", target="_blank") Medico.ink 
+        | Thank You Visit
+        | Again

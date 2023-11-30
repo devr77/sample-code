@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media print {
+            body {
+                background-color: red;
+            }
+        }
+
+        .footer {
+            position: fixed;
+            left: 10px;
+            bottom: 20px;
+            right: 10px;
+            width: 95%;
+            color: black;
+        }
+
+        .myDiv {
+            break-inside: avoid;
+        }
+    </style>
+</head>
+
+<body style="margin:10px;">
+    <div style="display: flex;justify-content: space-between;">
+        <div style="display: flex;">
+            <div style="display: flex;flex-direction: column;">
+                <h1 style="display:contents;">Doctor Name</h1>
+                <div>Education</div>
+                <div>Registration No</div>
+                <div>Specialists</div>
+            </div>
+            <div style="margin-left:10px;">
+                <img src="https://picsum.photos/200/300" alt="logo" style="width:100px;height:100px;">
+            </div>
+        </div>
+        <div style="display: flex;flex-direction: column;">
+            <h1 style="display:contents;">Hospital Name</h1>
+            <div>Hospital Address</div>
+            <div>Hospital Mobile No</div>
+        </div>
+
+    </div>
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    <div style="display: flex;justify-content: space-between;">
+        <div class="div">Name-</div>
+        <div class="div">Age-</div>
+        <div class="div">Gender-</div>
+        <div class="div">Date-</div>
+    </div>
+    <div style="display: flex;justify-content: space-between;">
+        <div class="div">Mobile No -</div>
+        <div class="div">Address -</div>
+
+    </div>
+    <div>
+        <h1 style="display:contents;">Problem- </h1>
+
+    </div>
+
+    <h1 style="display:contents;">Rx-</h1>
+    <div style="margin-left: 10%;margin-top: 5px;">
+        Paracetamol
+    </div>
+
+
+    <div class="footer">
+        <div style="display: flex;flex-direction:row-reverse;">Digitally Signed</div>
+        <div style=" text-align: center;">Appointment Is Booked on <a href="https://medico.ink/"
+                target="_blank">Medico.ink </a>
+            Thank You Visit
+            Again</div>
+    </div>
+</body>
+
+</html>

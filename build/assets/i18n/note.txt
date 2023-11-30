@@ -1,0 +1,3 @@
+https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb
+https://lokalise.com/blog/how-to-internationalize-react-application-using-i18next/
+https://github.com/banishnarang/yt-react-i18next/blob/main/src/i18n.js
