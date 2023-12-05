@@ -109,8 +109,4 @@ exports.downloadPrescription = (Email) => {
   });
 };
 
-// New Appointment Logic
-// Upcoming Notification
-// Feedback Logic
-
 // module.exports = sendMail;

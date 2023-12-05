@@ -11,7 +11,6 @@ const Image = require("./ImageController");
 
 exports.user = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.uid);
-  // const TookenUser = await User.findOne({ _id: verifyToken._id, "tokens.token": token });
   if (!user) {
     return next(new AppError("User not found", 401));
   }

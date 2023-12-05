@@ -2,11 +2,6 @@ const catchAsync = require("./catchAsync");
 var os = require("os");
 var osu = require("node-os-utils");
 
-
-// https://stackoverflow.com/questions/71966057/how-to-get-server-cpu-and-memory-and-disk-percentage-in-node-js
-// https://www.npmjs.com/package/check-disk-space
-// https://stackoverflow.com/questions/36816181/get-view-memory-cpu-usage-via-nodejs
-
 exports.Metrics = catchAsync(async (req, res, next) => {
   var cpu = osu.cpu;
   let cpuPercentage = await cpu.usage();
@@ -15,7 +10,7 @@ exports.Metrics = catchAsync(async (req, res, next) => {
   var netstat = osu.netstat;
   var netstatInfo = await netstat.stats();
   var drive = osu.drive;
-  // var driveInfo = await drive.info();
+  var driveInfo = await drive.info();
   res.status(200).send({
     arch: os.arch(),
     platform: os.platform(),
@@ -35,7 +30,7 @@ exports.Metrics = catchAsync(async (req, res, next) => {
     cpuAvg: osu.cpu.average(),
     netstatInfo: netstatInfo,
     resourceUsage: process.resourceUsage(),
-    // driveInfo: driveInfo,
+    driveInfo: driveInfo,
     loadAvg: os.loadavg(),
     NetworkInterFace: os.networkInterfaces(),
     constants: os.constants,

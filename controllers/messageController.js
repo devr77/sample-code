@@ -3,12 +3,6 @@ const catchAsync = require("../utils/catchAsync");
 const Message = require("./../models/messageModel");
 const Doctor = require("./../models/doctorsModel");
 
-// https://www.mongodb.com/community/forums/t/get-latest-dms-from-chat-collection/155420
-// https://www.appsloveworld.com/mongodb/100/199/query-mongoose-get-last-message-each-conversation?expand_article=1
-// https://www.appsloveworld.com/mongodb/100/175/how-to-get-the-last-message-of-the-users-conversations-and-group-it-in-a-list-in?expand_article=1
-// https://stackoverflow.com/questions/58315678/how-to-get-last-message-from-chat-conversation-in-mongodb?
-// https://stackoverflow.com/questions/16680015/how-to-use-populate-and-aggregate-in-same-statement
-
 // No of User 1-1 Chat
 exports.getUserChatsCount = catchAsync(async (req, res) => {
   let Id = req.uid;
@@ -134,11 +128,6 @@ exports.getUserChatsCount = catchAsync(async (req, res) => {
       },
     },
   ]);
-
-  // await Doctor.populate(count, {
-  //   path: "sender",
-  //   select: { _id: 1, firstName: 1, lastName: 1, image: 1 },
-  // });
 
   res.status(200).send({
     status: "Success",

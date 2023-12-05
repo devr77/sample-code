@@ -3,10 +3,8 @@ var Admin = require("firebase-admin");
 var serviceAccount = require("./medico-29d91-firebase-adminsdk-fo4hz-8de0699c65.json");
 
 Admin.initializeApp({
-  credential: Admin.credential.cert(serviceAccount)
+  credential: Admin.credential.cert(serviceAccount),
 });
-
-
 
 var message = {
   notification: {
@@ -15,19 +13,18 @@ var message = {
   },
   data: {
     account: "Savings",
-    balance: "$3020.25"
-  }
+    balance: "$3020.25",
+  },
 };
 
 var options = {
   priority: "high",
-  timeToLive: 60 * 60 *24
+  timeToLive: 60 * 60 * 24,
 };
 
 exports.sendNotification = (token) => {
-     Admin
-    .messaging()
-    .sendToDevice(token,message,options)
+  Admin.messaging()
+    .sendToDevice(token, message, options)
     .then((response) => {
       // Response is a message ID string.
       console.log("Successfully sent message:", response);
@@ -35,4 +32,4 @@ exports.sendNotification = (token) => {
     .catch((error) => {
       console.log("Error sending message:", error);
     });
-}
+};
