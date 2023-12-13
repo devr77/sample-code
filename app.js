@@ -137,9 +137,5 @@ app.use(Sentry.Handlers.errorHandler());
 // Socket Server Instance
 RegisterSocketServer(server);
 
-const port = process.env.PORT;
-server.listen(port, function () {
-  console.log(`Listening on port ${port}`);
-});
 
 module.exports = server;

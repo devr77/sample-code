@@ -27,6 +27,10 @@ if (environment === "production") {
 }
 
 const server = require("./app");
+const port = process.env.PORT;
+server.listen(port, function () {
+  console.log(`Listening on port ${port}`);
+});
 
 mongoose
   .connect(process.env.DATABASE, {
